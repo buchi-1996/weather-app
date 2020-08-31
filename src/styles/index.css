@@ -14,6 +14,7 @@
 }
 
 body{
+  position: relative;
   font-family: 'Nunito Sans', sans-serif;
   background: url(../assets/img/a_38_20140127223707.jpg)center/cover no-repeat;
   min-height: 100vh;
@@ -31,9 +32,7 @@ body{
   align-items: center;
 }
 
-.card-footer{
-  background: rgba(0, 0, 0, 0.301);
-}
+
 .search__box{
   flex: 1;
   height: 40px;
@@ -75,13 +74,20 @@ body{
 }
 
 .weather__container img{
-  width: 150px;
-  height: 100px;
   object-fit: contain;
+  /* width: 140px; */
 }
 
 .weather__icon{
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feels__like{
+  margin-top: -25px;
 }
 
 .weather__result{
@@ -90,12 +96,27 @@ body{
 
 }
 
+.card-footer{
+  background: rgba(0, 0, 0, 0.301);
+}
+
+.wind, .rain, .humidity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert{
+  position: absolute;
+  top: 0;
+  margin-top: -100px;
+}
+
 
 
 @media screen and (max-width: 768px){
-  /* body{
-    height: auto;
-  } */
+ 
 
   .card-header{
     flex-direction: column;
