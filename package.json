@@ -4,7 +4,8 @@
   "description": "A light foundation for your next frontend project based on webpack.",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "bugs": {
     "url": "https://github.com/wbkd/webpack-starter/issues"
   },
+  "homepage": "https://buchi-1996.github.io/weather-app",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -50,6 +52,7 @@
     "@babel/polyfill": "^7.10.1",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "gh-pages": "^3.1.0"
   }
 }
